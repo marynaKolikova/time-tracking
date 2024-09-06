@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Time tracking dashboard">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Time tracking dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./main.js"></script>
+</head>
+
+<body>
+  <header></header>
+  <nav></nav>
+  <main>
+    <section>
+      <div class="report-container">
+        <div class="profile">
+          <img src="./images/image-jeremy.png" alt="image Jeremy">
+          <div>
+            <h1>Report for</h1>
+            <h2>Jeremy Robson</h2>
+          </div>
+        </div>
+        <div class="report-filters">
+          <!-- Daily Option -->
+          <input type="radio" id="daily" name="time-option" class="time-option">
+          <label for="daily">Daily</label>
+          <!-- Weekly Option -->
+          <input type="radio" id="weekly" name="time-option" class="time-option" checked>
+          <label for="weekly">Weekly</label>
+          <!-- Monthly Option -->
+          <input type="radio" id="monthly" name="time-option" class="time-option">
+          <label for="monthly">Monthly</label>
+        </div>
+      </div>
+
+      <div class="work">
+        <div class="box">
+          <div class="cover cover-m">
+            <h3>Work</h3>
+            <a href="#"><svg width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5 2.5C5 3.88071 3.88071 5 2.5 5C1.11929 5 0 3.88071 0 2.5C0 1.11929 1.11929 0 2.5 0C3.88071 0 5 1.11929 5 2.5ZM13 2.5C13 3.88071 11.8807 5 10.5 5C9.11929 5 8 3.88071 8 2.5C8 1.11929 9.11929 0 10.5 0C11.8807 0 13 1.11929 13 2.5ZM18.5 5C19.8807 5 21 3.88071 21 2.5C21 1.11929 19.8807 0 18.5 0C17.1193 0 16 1.11929 16 2.5C16 3.88071 17.1193 5 18.5 5Z"
+                  fill="#BBC0FF" />
+              </svg></a>
+          </div>
+          <div class="cover cover-column">
+            <h4 class="current-time"></h4>
+            <h5 class="previous-time"></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="play">
+        <div class="box">
+          <div class="cover cover-m">
+            <h3>Play</h3>
+            <a href="#"><svg width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 2.5C5 3.88071 3.88071 5 2.5 5C1.11929 5 0 3.88071 0 2.5C0 1.11929 1.11929 0 2.5 0C3.88071 0 5 1.11929 5 2.5ZM13 2.5C13 3.88071 11.8807 5 10.5 5C9.11929 5 8 3.88071 8 2.5C8 1.11929 9.11929 0 10.5 0C11.8807 0 13 1.11929 13 2.5ZM18.5 5C19.8807 5 21 3.88071 21 2.5C21 1.11929 19.8807 0 18.5 0C17.1193 0 16 1.11929 16 2.5C16 3.88071 17.1193 5 18.5 5Z"
+                fill="#BBC0FF" />
+            </svg></a>
+          </div>
+          <div class="cover cover-column">
+            <h4 class="current-time"></h4>
+            <h5 class="previous-time"></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="study">
+        <div class="box">
+          <div class="cover cover-m">
+            <h3>Study</h3>
+            <a href="#"><svg width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 2.5C5 3.88071 3.88071 5 2.5 5C1.11929 5 0 3.88071 0 2.5C0 1.11929 1.11929 0 2.5 0C3.88071 0 5 1.11929 5 2.5ZM13 2.5C13 3.88071 11.8807 5 10.5 5C9.11929 5 8 3.88071 8 2.5C8 1.11929 9.11929 0 10.5 0C11.8807 0 13 1.11929 13 2.5ZM18.5 5C19.8807 5 21 3.88071 21 2.5C21 1.11929 19.8807 0 18.5 0C17.1193 0 16 1.11929 16 2.5C16 3.88071 17.1193 5 18.5 5Z"
+                fill="#BBC0FF" />
+            </svg></a>
+          </div>
+          <div class="cover cover-column">
+            <h4 class="current-time"></h4>
+            <h5 class="previous-time"></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="exercise">
+        <div class="box">
+          <div class="cover cover-m">
+            <h3>Exercise</h3>
+            <a href="#"><svg width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 2.5C5 3.88071 3.88071 5 2.5 5C1.11929 5 0 3.88071 0 2.5C0 1.11929 1.11929 0 2.5 0C3.88071 0 5 1.11929 5 2.5ZM13 2.5C13 3.88071 11.8807 5 10.5 5C9.11929 5 8 3.88071 8 2.5C8 1.11929 9.11929 0 10.5 0C11.8807 0 13 1.11929 13 2.5ZM18.5 5C19.8807 5 21 3.88071 21 2.5C21 1.11929 19.8807 0 18.5 0C17.1193 0 16 1.11929 16 2.5C16 3.88071 17.1193 5 18.5 5Z"
+                fill="#BBC0FF" />
+            </svg></a>
+          </div>
+          <div class="cover cover-column">
+            <h4 class="current-time"></h4>
+            <h5 class="previous-time"></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="social">
+        <div class="box">
+          <div class="cover cover-m">
+            <h3>Social</h3>
+            <a href="#"><svg width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 2.5C5 3.88071 3.88071 5 2.5 5C1.11929 5 0 3.88071 0 2.5C0 1.11929 1.11929 0 2.5 0C3.88071 0 5 1.11929 5 2.5ZM13 2.5C13 3.88071 11.8807 5 10.5 5C9.11929 5 8 3.88071 8 2.5C8 1.11929 9.11929 0 10.5 0C11.8807 0 13 1.11929 13 2.5ZM18.5 5C19.8807 5 21 3.88071 21 2.5C21 1.11929 19.8807 0 18.5 0C17.1193 0 16 1.11929 16 2.5C16 3.88071 17.1193 5 18.5 5Z"
+                fill="#BBC0FF" />
+            </svg></a>
+          </div>
+          <div class="cover cover-column">
+            <h4 class="current-time"></h4>
+            <h5 class="previous-time"></h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="self-care">
+        <div class="box">
+          <div class="cover cover-m">
+            <h3>Self Care</h3>
+            <a href="#"><svg width="21" height="5" viewBox="0 0 21 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5 2.5C5 3.88071 3.88071 5 2.5 5C1.11929 5 0 3.88071 0 2.5C0 1.11929 1.11929 0 2.5 0C3.88071 0 5 1.11929 5 2.5ZM13 2.5C13 3.88071 11.8807 5 10.5 5C9.11929 5 8 3.88071 8 2.5C8 1.11929 9.11929 0 10.5 0C11.8807 0 13 1.11929 13 2.5ZM18.5 5C19.8807 5 21 3.88071 21 2.5C21 1.11929 19.8807 0 18.5 0C17.1193 0 16 1.11929 16 2.5C16 3.88071 17.1193 5 18.5 5Z"
+                fill="#BBC0FF" />
+            </svg></a>
+          </div>
+          <div class="cover cover-column">
+            <h4 class="current-time"></h4>
+            <h5 class="previous-time"></h5>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer></footer>
+</body>
+
+</html>
